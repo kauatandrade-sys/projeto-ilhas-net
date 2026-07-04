@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -109,7 +110,8 @@
             </div>
 
             <div class="plan-grid">
-                <article class="plan-card">
+                <article class="plan-card plan-card--featured">
+                    <span class="plan-badge">Sede administrativa</span>
                     <header>
                         <h3>Mosqueiro</h3>
                         <p class="loc-uf">PA</p>
@@ -124,11 +126,10 @@
                         <li>Av Beira Mar, nº 05</li>
                         <li>Farol · Mosqueiro / PA</li>
                     </ul>
-                    <a href="#contato" class="btn btn-outline">Ver no mapa</a>
+                    <a href="#cobertura" class="btn btn-gold">Ver no mapa</a>
                 </article>
 
-                <article class="plan-card plan-card--featured">
-                    <span class="plan-badge">Sede administrativa</span>
+                <article class="plan-card">
                     <header>
                         <h3>Santa Bárbara</h3>
                         <p class="loc-uf">PA</p>
@@ -143,7 +144,7 @@
                         <li>R. Carvalho Braga, nº 159</li>
                         <li>Centro · Santa Bárbara / PA</li>
                     </ul>
-                    <a href="#contato" class="btn btn-gold">Ver no mapa</a>
+                    <a href="#cobertura" class="btn btn-outline">Ver no mapa</a>
                 </article>
 
                 <article class="plan-card">
@@ -219,35 +220,7 @@
                     <li><span class="check"></span> Suporte técnico local e humano</li>
                 </ul>
             </div>
-            <div class="coverage-map" aria-hidden="true">
-                <svg viewBox="0 0 400 400">
-                    <defs>
-                        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.6"/>
-                            <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                    <circle cx="200" cy="200" r="180" fill="url(#glow)"/>
-                    <g stroke="#D4AF37" stroke-width="0.5" fill="none" opacity="0.4">
-                        <circle cx="200" cy="200" r="60"/>
-                        <circle cx="200" cy="200" r="100"/>
-                        <circle cx="200" cy="200" r="140"/>
-                        <circle cx="200" cy="200" r="180"/>
-                    </g>
-                    <g class="islands">
-                        <circle class="island" cx="120" cy="140" r="8" fill="#0A1F44" stroke="#D4AF37" stroke-width="2"/>
-                        <circle class="island" cx="280" cy="120" r="6" fill="#0A1F44" stroke="#D4AF37" stroke-width="2"/>
-                        <circle class="island" cx="180" cy="240" r="10" fill="#0A1F44" stroke="#D4AF37" stroke-width="2"/>
-                        <circle class="island" cx="310" cy="270" r="7" fill="#0A1F44" stroke="#D4AF37" stroke-width="2"/>
-                        <circle class="island" cx="90" cy="280" r="5" fill="#0A1F44" stroke="#D4AF37" stroke-width="2"/>
-                        <circle class="island" cx="240" cy="180" r="4" fill="#0A1F44" stroke="#D4AF37" stroke-width="2"/>
-                    </g>
-                    <g class="pulses">
-                        <circle cx="180" cy="240" r="4" fill="none" stroke="#D4AF37" stroke-width="2" class="pulse"/>
-                        <circle cx="120" cy="140" r="4" fill="none" stroke="#D4AF37" stroke-width="2" class="pulse" style="animation-delay:.5s"/>
-                    </g>
-                </svg>
-            </div>
+            <div class="coverage-map" id="coverageMap" role="region" aria-label="Mapa interativo das localizações da Ilhas Net no Pará"></div>
         </div>
     </section>
 
@@ -363,6 +336,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 </html>
