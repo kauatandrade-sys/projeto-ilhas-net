@@ -75,7 +75,7 @@
         const coverageStyle = {
             color: '#D4AF37',
             weight: 2.5,
-            fillColor: '#1b3a7a',
+            fillColor: '#1e3f83',
             fillOpacity: 0.35,
         };
 
