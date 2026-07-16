@@ -143,7 +143,7 @@
             { name: 'Santa Bárbara do Pará',  role: 'sede',   coords: [-1.2239, -48.4944], addr: 'R. Carvalho Braga, nº 159 · Centro' },
             { name: 'Salvaterra',             role: 'normal', coords: [-0.7531, -48.5167], addr: 'Rua Cearense, nº 159 · Centro' },
             { name: 'Soure',                  role: 'normal', coords: [-0.7167, -48.5239], addr: 'Rua Quinta, nº 1595 · Centro' },
-            { name: 'Acaré',                  role: 'normal', coords: [-1.9639, -48.1961], addr: 'Tv. Itapecuru, S/N · Alegria' },
+            { name: 'Marajó',                  role: 'normal', coords: [-1.9639, -48.1961], addr: 'Tv. Itapecuru, S/N · Alegria' },
         ];
 
        
