@@ -1,11 +1,9 @@
-/* ============================================
-   ILHAS NET — Interações JS
-   ============================================ */
+/* K.C fafas*/
 
 (function () {
     'use strict';
 
-    // --- Navbar scroll effect ---
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     function onScroll() {
         if (window.scrollY > 40) {
@@ -17,7 +15,7 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // --- Mobile menu toggle ---
+    //mobile menu
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => {
@@ -33,7 +31,7 @@
         });
     });
 
-    // --- Reveal on scroll ---
+
     const revealEls = document.querySelectorAll(
         '.section-head, .plan-card, .contact-card, .coverage-text, .coverage-map, .footer-inner'
     );
@@ -56,7 +54,7 @@
         revealEls.forEach((el) => el.classList.add('visible'));
     }
 
-    // --- Mapa interativo (Leaflet) ---
+    //Mapa interativo
     const mapEl = document.getElementById('coverageMap');
     if (mapEl && typeof L !== 'undefined') {
         const map = L.map('coverageMap', {
@@ -71,7 +69,7 @@
             attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        // Estilo padrão dos polígonos de cobertura (azul translúcido + borda dourada)
+        
         const coverageStyle = {
             color: '#D4AF37',
             weight: 2.5,
@@ -79,7 +77,7 @@
             fillOpacity: 0.35,
         };
 
-        // Função que retorna o HTML do popup premium
+        
         function popupHTML(name, isMain) {
             const badge = isMain ? 'Sede administrativa' : 'Atendimento';
             return `
@@ -98,7 +96,7 @@
 
         const popupOpts = { maxWidth: 280, className: 'premium-popup', minWidth: 260 };
 
-        // ---- Polígonos GeoJSON (3 ilhas) ----
+        
         const polygons = [
             {
                 name: 'Ilha de Mosqueiro',
@@ -139,7 +137,7 @@
             layer.bindPopup(popupHTML(p.name, p.isMain), popupOpts);
         });
 
-        // ---- Marcadores ----
+    
         const locations = [
             { name: 'Mosqueiro',              role: 'matriz', coords: [-1.1140, -48.4720], addr: 'Av Beira Mar, nº 05 · Farol' },
             { name: 'Santa Bárbara do Pará',  role: 'sede',   coords: [-1.2239, -48.4944], addr: 'R. Carvalho Braga, nº 159 · Centro' },
@@ -148,7 +146,7 @@
             { name: 'Acaré',                  role: 'normal', coords: [-1.9639, -48.1961], addr: 'Tv. Itapecuru, S/N · Alegria' },
         ];
 
-        // Marcador Matriz (Mosqueiro) — maior, com pulso
+       
         const matrizIcon = L.divIcon({
             className: 'ilhas-marker-ilhasnet',
             html: '<div class="marker-ilhasnet marker-ilhasnet--matriz"><span></span></div>',
@@ -156,7 +154,7 @@
             iconAnchor: [19, 19],
         });
 
-        // Marcador Sede (Santa Bárbara) — dourado médio
+       
         const sedeIcon = L.divIcon({
             className: 'ilhas-marker-ilhasnet',
             html: '<div class="marker-ilhasnet marker-ilhasnet--featured"><span></span></div>',
@@ -164,7 +162,7 @@
             iconAnchor: [14, 14],
         });
 
-        // Marcador padrão (navy)
+        // Marcador padrão
         const navyIcon = L.divIcon({
             className: 'ilhas-marker-ilhasnet',
             html: '<div class="marker-ilhasnet"><span></span></div>',
@@ -178,21 +176,21 @@
         locations.forEach((loc) => {
             const marker = L.marker(loc.coords, { icon: iconByRole[loc.role] }).addTo(map);
 
-            // Marcador da Matriz também exibe popup premium
+
             const isMain = loc.role === 'matriz';
             const popupName = popupTitleByRole[loc.role] || loc.name;
 
             marker.bindPopup(popupHTML(popupName, isMain), popupOpts);
         });
 
-        // ---- Centralizar o mapa mostrando todas as áreas ----
+        // ---- Centralizar o mapa
         const allPoints = [
             ...polygons.flatMap((p) => p.ring),
             ...locations.map((l) => l.coords),
         ];
         map.fitBounds(L.latLngBounds(allPoints), { padding: [50, 50], maxZoom: 11 });
 
-        // Habilitar scroll wheel zoom só após o primeiro clique no mapa
+     
         map.once('click', () => { map.scrollWheelZoom.enable(); });
     }
 })();
