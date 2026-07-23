@@ -33,7 +33,7 @@
 
 
     const revealEls = document.querySelectorAll(
-        '.section-head, .plan-card, .contact-card, .coverage-text, .coverage-map, .footer-inner'
+        '.section-head, .plan-card, .contact-card, .coverage-text, .coverage-map, .footer-inner, .contract-card'
     );
     revealEls.forEach((el) => el.classList.add('reveal'));
 
