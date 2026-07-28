@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 48" role="img" aria-label="Instalação Grátis">
+  <title>Instalação Grátis</title>
+  <!-- Ícone check dentro de círculo -->
+  <circle cx="14" cy="24" r="11" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+  <path d="M8.5 24 L13 28 L20 20" stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Texto -->
+  <text x="32" y="20" font-family="'Nimbus Sans L', Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#F7F7F7" letter-spacing="0.6">INSTALAÇÃO</text>
+  <text x="32" y="36" font-family="'Nimbus Sans L', Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#FFD700" letter-spacing="0.6">GRÁTIS</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 48" role="img" aria-label="Fibra Óptica 100%">
+  <title>Fibra Óptica 100%</title>
+  <!-- Linhas de fibra óptica estilizadas -->
+  <g stroke="#FFD700" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M6 16 C 14 10, 22 22, 30 16" />
+    <path d="M6 24 C 14 18, 22 30, 30 24" />
+    <path d="M6 32 C 14 26, 22 38, 30 32" />
+  </g>
+  <!-- Texto -->
+  <text x="38" y="20" font-family="'Nimbus Sans L', Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#F7F7F7" letter-spacing="0.6">FIBRA ÓPTICA</text>
+  <text x="38" y="36" font-family="'Nimbus Sans L', Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#FFD700" letter-spacing="0.6">100%</text>
+</svg>

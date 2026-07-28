@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -58,7 +57,7 @@
             </div>
         </div>
         <div class="container hero-content">
-            <span class="eyebrow">
+            <span class="eyebrow hero-eyebrow">
                 <span class="eyebrow-dot"></span>
                 Conectando o Pará · fibra óptica + TV
             </span>
@@ -67,29 +66,157 @@
                 <span class="text-gold">entre as pessoas.</span>
             </h1>
             <p class="hero-subtitle">
-                A Ilhas Net
-                leva internet de alta velocidade e TV a cinco pontos
+                A Ilhas Net leva internet de alta velocidade e TV a cinco pontos
                 estratégicos do estado do Pará — com o suporte que você merece.
             </p>
-            <div class="hero-cta">
-                <a href="#localizacoes" class="btn btn-gold">Ver localizações</a>
-                <a href="#contato" class="btn btn-ghost">
-                    <span>Falar com a gente</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-value">5</div>
-                    <div class="stat-label">Cidades atendidas</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">24/7</div>
-                    <div class="stat-label">Suporte humano</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">100%</div>
-                    <div class="stat-label">Fibra óptica</div>
+
+            <!-- Carrossel de planos -->
+            <div class="plans-carousel" id="plansCarousel" aria-roledescription="carousel" aria-label="Planos Ilhas Net">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <!-- Card 1 — 400 Mega -->
+                        <article class="pcard" aria-roledescription="slide" aria-label="Plano 400 Mega">
+                            <span class="pcard-badge pcard-badge--oferta">Oferta</span>
+                            <header class="pcard-head">
+                                <span class="pcard-eyebrow">Residencial</span>
+                                <h3 class="pcard-name">Ilhas 400</h3>
+                            </header>
+                            <div class="pcard-speed">
+                                <span class="pcard-speed-num">400</span>
+                                <span class="pcard-speed-unit">Mega</span>
+                            </div>
+                            <p class="pcard-speed-desc">Fibra óptica full · Wi-Fi 6 incluso</p>
+                            <ul class="pcard-benefits">
+                                <li>Upload de 200 Mega</li>
+                                <li>Instalação grátis</li>
+                                <li>Suporte 24/7 humano</li>
+                            </ul>
+                            <div class="pcard-logos" aria-label="Serviços inclusos">
+                                <img src="assets/images/logos/wifi-6.svg" alt="Wi-Fi 6" class="pcard-logo" />
+                            </div>
+                            <div class="pcard-price">
+                                <span class="pcard-currency">R$</span>
+                                <span class="pcard-value">89</span>
+                                <span class="pcard-cents">,90</span>
+                                <span class="pcard-period">/mês</span>
+                            </div>
+                            <a href="#contato" class="btn btn-gold pcard-cta">Contratar</a>
+                        </article>
+
+                        <!-- Card 2 — 600 Mega -->
+                        <article class="pcard" aria-roledescription="slide" aria-label="Plano 600 Mega">
+                            <header class="pcard-head">
+                                <span class="pcard-eyebrow">Residencial</span>
+                                <h3 class="pcard-name">Ilhas 600</h3>
+                            </header>
+                            <div class="pcard-speed">
+                                <span class="pcard-speed-num">600</span>
+                                <span class="pcard-speed-unit">Mega</span>
+                            </div>
+                            <p class="pcard-speed-desc">Ideal para streaming 4K e home office</p>
+                            <ul class="pcard-benefits">
+                                <li>Upload de 300 Mega</li>
+                                <li>Roteador Wi-Fi 6 premium</li>
+                                <li>IP fixo opcional</li>
+                            </ul>
+                            <div class="pcard-logos" aria-label="Serviços inclusos">
+                                <img src="assets/images/logos/wifi-6.svg" alt="Wi-Fi 6" class="pcard-logo" />
+                            </div>
+                            <div class="pcard-price">
+                                <span class="pcard-currency">R$</span>
+                                <span class="pcard-value">109</span>
+                                <span class="pcard-cents">,90</span>
+                                <span class="pcard-period">/mês</span>
+                            </div>
+                            <a href="#contato" class="btn btn-gold pcard-cta">Contratar</a>
+                        </article>
+
+                        <!-- Card 3 — 800 Mega -->
+                        <article class="pcard pcard--featured" aria-roledescription="slide" aria-label="Plano 800 Mega — Mais Vendido">
+                            <span class="pcard-badge pcard-badge--best">Mais Vendido</span>
+                            <header class="pcard-head">
+                                <span class="pcard-eyebrow pcard-eyebrow--gold">Residencial Premium</span>
+                                <h3 class="pcard-name">Ilhas 800</h3>
+                            </header>
+                            <div class="pcard-speed">
+                                <span class="pcard-speed-num">800</span>
+                                <span class="pcard-speed-unit">Mega</span>
+                            </div>
+                            <p class="pcard-speed-desc">Velocidade e estabilidade para toda a família</p>
+                            <ul class="pcard-benefits">
+                                <li>Upload de 400 Mega</li>
+                                <li>Mesh Wi-Fi 6 incluso</li>
+                                <li>Streaming + TV digital</li>
+                            </ul>
+                            <div class="pcard-logos" aria-label="Serviços inclusos">
+                                <img src="assets/images/logos/wifi-6.svg" alt="Wi-Fi 6" class="pcard-logo" />
+                                <img src="assets/images/logos/ilhas-net-tv.svg" alt="Ilhas Net TV" class="pcard-logo" />
+                            </div>
+                            <div class="pcard-price">
+                                <span class="pcard-currency">R$</span>
+                                <span class="pcard-value">129</span>
+                                <span class="pcard-cents">,90</span>
+                                <span class="pcard-period">/mês</span>
+                            </div>
+                            <a href="#contato" class="btn btn-gold pcard-cta">Contratar</a>
+                        </article>
+
+                        <!-- Card 4 — 1 Giga -->
+                        <article class="pcard" aria-roledescription="slide" aria-label="Plano 1 Giga">
+                            <span class="pcard-badge pcard-badge--new">Novo</span>
+                            <header class="pcard-head">
+                                <span class="pcard-eyebrow">Residencial Ultra</span>
+                                <h3 class="pcard-name">Ilhas 1 Giga</h3>
+                            </header>
+                            <div class="pcard-speed">
+                                <span class="pcard-speed-num">1</span>
+                                <span class="pcard-speed-unit">Giga</span>
+                            </div>
+                            <p class="pcard-speed-desc">Performance máxima para games e criadores</p>
+                            <ul class="pcard-benefits">
+                                <li>Upload de 500 Mega</li>
+                                <li>Mesh Wi-Fi 6E duplo</li>
+                                <li>Atendimento VIP</li>
+                            </ul>
+                            <div class="pcard-logos" aria-label="Serviços inclusos">
+                                <img src="assets/images/logos/wifi-6e.svg" alt="Wi-Fi 6E" class="pcard-logo" />
+                            </div>
+                            <div class="pcard-price">
+                                <span class="pcard-currency">R$</span>
+                                <span class="pcard-value">149</span>
+                                <span class="pcard-cents">,90</span>
+                                <span class="pcard-period">/mês</span>
+                            </div>
+                            <a href="#contato" class="btn btn-gold pcard-cta">Contratar</a>
+                        </article>
+
+                        <!-- Card 5 — Empresarial -->
+                        <article class="pcard" aria-roledescription="slide" aria-label="Plano Empresarial 1 Giga">
+                            <header class="pcard-head">
+                                <span class="pcard-eyebrow">Empresarial</span>
+                                <h3 class="pcard-name">Ilhas Business</h3>
+                            </header>
+                            <div class="pcard-speed">
+                                <span class="pcard-speed-num">1</span>
+                                <span class="pcard-speed-unit">Giga+</span>
+                            </div>
+                            <p class="pcard-speed-desc">Link dedicado com SLA e suporte corporativo</p>
+                            <ul class="pcard-benefits">
+                                <li>IP fixo dedicado</li>
+                                <li>SLA 99,9% garantido</li>
+                                <li>Gerente de conta</li>
+                            </ul>
+                            <div class="pcard-price">
+                                <span class="pcard-currency">R$</span>
+                                <span class="pcard-value">299</span>
+                                <span class="pcard-cents">,90</span>
+                                <span class="pcard-period">/mês</span>
+                            </div>
+                            <a href="#contato" class="btn btn-gold pcard-cta">Contratar</a>
+                        </article>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,7 +261,7 @@
                         <li>Av Beira Mar, nº 05</li>
                         <li>Farol · Mosqueiro / PA</li>
                     </ul>
-                    <a href="#cobertura" class="btn btn-gold">Ver no mapa</a>
+                    <a href="#contato" class="btn btn-gold">Ver no mapa</a>
                 </article>
 
                 <article class="plan-card">
@@ -151,7 +278,7 @@
                         <li>R. Carvalho Braga, nº 159</li>
                         <li>Centro · Santa Bárbara / PA</li>
                     </ul>
-                    <a href="#cobertura" class="btn btn-outline">Ver no mapa</a>
+                    <a href="#contato" class="btn btn-outline">Ver no mapa</a>
                 </article>
 
                 <article class="plan-card">
@@ -208,23 +335,6 @@
                     <a href="#contato" class="btn btn-outline">Ver no mapa</a>
                 </article>
             </div>
-        </div>
-    </section>
-
-    <!-- COBERTURA -->
-    <section class="coverage" id="cobertura">
-        <div class="container coverage-inner">
-            <div class="coverage-text">
-                <span class="eyebrow"><span class="eyebrow-dot"></span>Cobertura</span>
-                <h2>Presença real em cinco municípios paraenses.</h2>
-                <p>Atuamos onde a conectividade faz diferença: nas ilhas, no interior e nos centros urbanos do Pará. Nossa rede de fibra óptica atende residências e empresas com a mesma excelência.</p>
-                <ul class="coverage-list">
-                    <li><span class="check"></span> Fibra óptica 100% dedicada</li>
-                    <li><span class="check"></span> TV digital em alta definição</li>
-                    <li><span class="check"></span> Suporte técnico local e humano</li>
-                </ul>
-            </div>
-            <div class="coverage-map" id="coverageMap" role="region" aria-label="Mapa interativo das localizações da Ilhas Net no Pará"></div>
         </div>
     </section>
 
@@ -402,7 +512,6 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 </html>

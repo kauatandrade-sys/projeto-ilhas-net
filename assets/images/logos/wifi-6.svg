@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 48" role="img" aria-label="Wi-Fi 6">
+  <title>Wi-Fi 6</title>
+  <g fill="#F7F7F7">
+    <!-- Ondas concêntricas do Wi-Fi -->
+    <path d="M14 28 a4 4 0 0 1 4 0 v-3 a7 7 0 0 0 -8 0 z"/>
+    <path d="M9 24 a11 11 0 0 1 14 0 v-3 a14 14 0 0 0 -18 0 z"/>
+    <path d="M4 20 a18 18 0 0 1 24 0 v-3 a21 21 0 0 0 -28 0 z"/>
+    <circle cx="16" cy="32" r="2"/>
+  </g>
+  <!-- Texto Wi-Fi 6 -->
+  <text x="36" y="22" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#F7F7F7" letter-spacing="0.5">Wi-Fi</text>
+  <text x="36" y="38" font-family="Inter, Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#FFD700" letter-spacing="0.5">6</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-label="Ilhas Net TV">
+  <title>Ilhas Net TV</title>
+  <!-- Ícone TV -->
+  <g fill="none" stroke="#F7F7F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="10" width="22" height="16" rx="2"/>
+    <path d="M10 30 v4 M20 30 v4 M8 36 h14"/>
+  </g>
+  <!-- Texto -->
+  <text x="34" y="22" font-family="'Nimbus Sans L', Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#F7F7F7" letter-spacing="1.2">ILHAS NET</text>
+  <text x="34" y="38" font-family="'Nimbus Sans L', Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#FFD700" letter-spacing="1.2">TV</text>
+</svg>
